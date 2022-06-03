@@ -1,11 +1,7 @@
-let ville = "Atlanta";
+let city = "Atlanta";
 
 const url =
-  "https://api.openweathermap.org/data/2.5/weather?q=" +
-  ville +
-  "&appid=8b5e0537b2b17abc10e53b7116cb33e1&units=metric";
-
-// const url = "https://blockchain.info/ticker";
+  "https://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid=8b5e0537b2b17abc10e53b7116cb33e1&units=metric";
 
 //update the weather automatically
 function retrievePrice() {
@@ -21,7 +17,7 @@ function retrievePrice() {
       if (request.status === 200) {
         let storeResponse = request.response; // Store a response
         console.log(storeResponse);
-        document.querySelector("#price_label").textContent = DollarResponse; // To output US dollar data on the webpage
+        document.querySelector("#temperature").textContent = storeResponse; // To output US dollar data on the webpage
       } else {
         alert("An error occured! Come back later!");
       }
