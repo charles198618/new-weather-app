@@ -13,8 +13,10 @@ request.onload = function () {
           let weatherDatas = request.response; // Store a response
           //main.temp
           // console.log(storeResponse); 
-          let temperature = weatherDatas.main.temp; // If I want a specific data from US bitcoin, to know the last price of bitcoin
+          let temperature = weatherDatas.main.temp; 
           console.log(temperature);
+          document.querySelector("#temperature").textContent = temperature; //output the temperature of the city on webpage
+          document.querySelector("#city").textContent = city; //output the name of the city on webpage
         }
         else{
           alert("An error occured! Come back later!");
