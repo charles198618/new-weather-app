@@ -14,8 +14,8 @@ request.onload = function () {
           //main.temp
           // console.log(storeResponse); 
           let temperature = weatherDatas.main.temp; 
-          console.log(temperature);
-          document.querySelector("#temperature").textContent = temperature; //output the temperature of the city on webpage
+          let city = this.response.name;
+          document.querySelector("#temperature_label").textContent = temperature; //output the temperature of the city on webpage
           document.querySelector("#city").textContent = city; //output the name of the city on webpage
         }
         else{
