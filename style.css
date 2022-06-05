@@ -5,7 +5,7 @@ html, body {
     min-width: 400px;
   }
   
-  #ville {
+  #city {
     text-transform: capitalize;
   }
   
