@@ -10,8 +10,11 @@ request.send(); // I send my request
 request.onload = function () {
       if (request.readyState === XMLHttpRequest.DONE) {
         if (request.status === 200) {
-          let storeResponse = request.response; // Store a response
-          console.log(storeResponse); 
+          let weatherDatas = request.response; // Store a response
+          //main.temp
+          // console.log(storeResponse); 
+          let temperature = weatherDatas.main.temp; // If I want a specific data from US bitcoin, to know the last price of bitcoin
+          console.log(temperature);
         }
         else{
           alert("An error occured! Come back later!");
